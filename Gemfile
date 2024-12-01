@@ -18,6 +18,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 # Component like views
 gem "view_component"
+# Pagination
+gem "kaminari"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
