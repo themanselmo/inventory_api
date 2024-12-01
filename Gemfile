@@ -18,6 +18,8 @@ gem "stimulus-rails"
 gem "jbuilder"
 # Component like views
 gem "view_component"
+# CSS Styling
+gem "tailwindcss-rails"
 # Pagination
 gem "kaminari"
 # Use Redis adapter to run Action Cable in production
