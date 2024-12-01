@@ -1,0 +1,27 @@
+<div class="flex justify-center mt-4">
+  <nav>
+    <ul class="flex space-x-2">
+      <% if @items.prev_page %>
+        <li>
+          <%= link_to 'Previous', url_for(page: @items.prev_page), class: 'px-4 py-2 bg-blue-500 text-white rounded-md' %>
+        </li>
+      <% else %>
+        <li class="px-4 py-2 text-gray-400">Previous</li>
+      <% end %>
+
+      <% (1..@items.total_pages).each do |page| %>
+        <li>
+          <%= link_to page, url_for(page: page), class: "px-4 py-2 rounded-md #{'bg-blue-500 text-white' if @items.current_page == page} #{'text-blue-500' unless @items.current_page == page}" %>
+        </li>
+      <% end %>
+
+      <% if @items.next_page %>
+        <li>
+          <%= link_to 'Next', url_for(page: @items.next_page), class: 'px-4 py-2 bg-blue-500 text-white rounded-md' %>
+        </li>
+      <% else %>
+        <li class="px-4 py-2 text-gray-400">Next</li>
+      <% end %>
+    </ul>
+  </nav>
+</div>
